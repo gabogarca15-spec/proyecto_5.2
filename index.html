@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="calc-header">
+      <h1 class="calc-title"> Calculadora</h1>
+    </div>
+
+    <div class="display">
+      <div class="display-expression" id="expresion"></div>
+      <input type="text" id="resultado" value="0" readonly>
+    </div>
+
+    <div class="botones">
+      <button class="operador btn-clear" onclick="limpiarTodo()">C</button>
+      <button class="operador btn-back" onclick="borrarUno()">←</button>
+      <button class="operador btn-pct" onclick="aplicarPorcentaje()">%</button>
+      <button class="operador btn-op" onclick="agregarOperador('÷')">÷</button>
+
+      <button class="numero" onclick="agregarNumero('7')">7</button>
+      <button class="numero" onclick="agregarNumero('8')">8</button>
+      <button class="numero" onclick="agregarNumero('9')">9</button>
+      <button class="operador btn-op" onclick="agregarOperador('×')">×</button>
+
+      <button class="numero" onclick="agregarNumero('4')">4</button>
+      <button class="numero" onclick="agregarNumero('5')">5</button>
+      <button class="numero" onclick="agregarNumero('6')">6</button>
+      <button class="operador btn-op" onclick="agregarOperador('-')">−</button>
+
+      <button class="numero" onclick="agregarNumero('1')">1</button>
+      <button class="numero" onclick="agregarNumero('2')">2</button>
+      <button class="numero" onclick="agregarNumero('3')">3</button>
+      <button class="operador btn-op" onclick="agregarOperador('+')">+</button>
+
+      <button class="numero btn-zero" onclick="agregarNumero('0')">0</button>
+      <button class="numero" onclick="agregarNumero('.')">.</button>
+      <button class="operador btn-equals" onclick="calcularResultado()">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
